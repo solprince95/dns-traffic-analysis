@@ -1,4 +1,3 @@
-
 # 🛡️ DNS Traffic Capture with tcpdump (Kali Linux)
 
 ## 📘 Overview
@@ -23,17 +22,16 @@ I visited a cake recipe website from the Kali VM and captured real DNS queries, 
 
 1. Opened terminal in Kali
 2. Ran `sudo tcpdump -i eth0 port 53 -w dns-capture.pcap`
-3. Opened Firefox and visited `yummyrecipesforme.com`
+3. Opened Firefox and visited `allrecipes.com`
 4. Stopped capture with `Ctrl + C`
 5. Moved the `.pcap` file to Windows using a shared folder
 6. Opened and analyzed the file in Wireshark
 
 ---
 
-## 🔍 Sample Output (from terminal)
-
-IP 192.168.1.15.52943 > 8.8.8.8.53: 34567+ A? yummyrecipesforme.com. (35) IP 8.8.8.8.53 > 192.168.1.15.52943: 34567* 1/0/0 A 93.184.216.34 (51)
-
+## 🔍 Sample DNS Query Output (from terminal)
+  
+1	0.000000	10.0.2.15	10.0.2.3	DNS	79	Standard query 0x80fa A analytics.rlcdn.com
 ---
 
 ## 🎯 What I Learned
@@ -57,3 +55,5 @@ IP 192.168.1.15.52943 > 8.8.8.8.53: 34567+ A? yummyrecipesforme.com. (35) IP 8.8
 
 Certificate: Google Cybersecurity Professional Certificate  
 Platform: Kali Linux in VirtualBox
+
+
